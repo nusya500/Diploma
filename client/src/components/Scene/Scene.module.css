@@ -1,0 +1,12 @@
+.scene {
+    height: calc(100vh - 60px);
+    padding: 30px;
+    overflow: scroll;
+}
+
+@media screen and (max-width: 500px) {
+    .scene {
+        height: calc(100vh - 130px);
+        padding: 40px 20px;
+    }
+}

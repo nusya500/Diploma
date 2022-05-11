@@ -1,0 +1,201 @@
+.dashboard {
+    display: flex;
+}
+
+.navbar {
+    box-sizing: border-box;
+    composes: backgroundColor from "../../App.module.css";
+    min-width: 310px;
+    margin-left: -250px;
+    height: 100vh;
+    transition: all .3s;
+}
+
+.main {
+    width: calc(100% - 60px);
+}
+
+.flexBlock {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-weight: bold;
+    margin-left: 10px;
+    display: block;
+    /* padding-top: 10px; */
+    font-size: 28px;
+    composes: textColor from "../../App.module.css";
+    text-decoration: none;
+}
+
+.logo > img {
+    width: 110px;
+}
+
+.ham {
+    padding-top: 7px;
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
+    composes: backgroundColor from "../../App.module.css";
+    text-decoration: none;
+    transition: .3s;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ham:hover {
+    opacity: .7;
+}
+
+.line {
+    display: block;
+    height: 4px;
+    width: 50%;
+    background: #000;
+    border-radius: 10px;
+    transform: translateY(-100%);
+    transition: all .3s;
+    margin: 3px 0;
+}
+
+.open {
+    display: block;
+}
+
+.navbar.open {
+    margin-left: 0;
+}
+
+.line:nth-child(1).open {
+    width: 30%;
+    transform: translateY(100%) rotate(-40deg) translate(2px, -2px);
+}
+
+.line:nth-child(2).open {
+    opacity: 0;
+}
+
+.line:nth-child(3).open {
+    width: 30%;
+    transform: translateY(-300%) rotate(40deg) translate(2px, 2px);
+}
+
+.menu {
+    height: calc(100vh - 60px);
+    padding: 0 0 20px 0;
+    box-sizing: border-box;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.link {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    height: 60px;
+    composes: textColor from "../../App.module.css";
+    font-size: 14px;
+    transform: translateX(250px);
+    transition: all .3s;
+}
+
+.link:hover {
+    background: #999;
+}
+
+.menu.open > .item > a {
+    transform: translateX(0);
+}
+
+.active {
+    background: #999;
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    display: grid;
+    place-items: center;
+    margin-right: 10px;
+    font-size: 25px;
+    composes: textColor from "../../App.module.css";
+}
+
+.text {
+    composes: textColor from "../../App.module.css";
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.disabled {
+    cursor: default;
+    pointer-events: none;        
+    text-decoration: none;
+    color: grey;
+}
+
+@media screen and (max-width: 500px) {
+    .dashboard {
+        flex-direction: column-reverse;
+    }
+    .navbar {
+        width: 100%;
+        min-width: 0;
+        margin-left: 0;
+        height: 70px;
+    }
+    
+    .main {
+        width: 100%;
+        height: calc(100vh - 70px);
+    }
+    .title {
+        display: none;
+    }
+    .menu {
+        width: 100%;
+        height: 70px;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0;
+        overflow: hidden;
+    }
+    .item {
+        width: 33.33%;
+        height: 70px;
+    }
+    .link {
+        height: 70px;
+        display: grid;
+        place-items: center;
+        transform: translateX(0);
+    }
+    .text {
+        display: none;
+    }
+    .icon {
+        height: 70px;
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .icon {
+        font-size: 30px;
+    }
+}

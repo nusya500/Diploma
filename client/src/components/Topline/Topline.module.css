@@ -1,0 +1,98 @@
+.topline {
+    height: 60px;
+    box-shadow: 5px 0px 10px 0px #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.item {
+    display: flex;
+    list-style: none;
+}
+
+.link {
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-grid;
+    place-items: center;
+}
+
+.profile {
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    composes: textColor from "../../App.module.css";
+}
+
+.icon {
+    font-size: 30px;
+    composes: textColor from "../../App.module.css";
+}
+
+.account {
+    font-size: 25px;
+    margin-right: 5px;
+    composes: textColor from "../../App.module.css";
+}
+
+.message {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    width: 400px;
+    z-index: 11;
+}
+
+.active {
+    display: block;
+}
+
+.text {
+    font-size: 16px;
+    composes: textColor from "../../App.module.css";
+    margin-bottom: 20px;
+}
+
+.submit {
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    composes: backgroundColor from "../../App.module.css";
+    border-radius: 5px;
+    padding: 15px 30px;
+    text-decoration: none;
+    composes: textColor from "../../App.module.css";
+    transition: .3s;
+    margin-right: 10px;
+}
+
+.submit:nth-child(3) {
+    margin-right: 0;
+}
+
+@media screen and (max-width: 500px) {
+    .message {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .text {
+        font-size: 18px;
+    }
+    .message {
+        padding: 60px 40px;
+    }
+    .submit {
+        padding: 13px 25px;
+    }
+}

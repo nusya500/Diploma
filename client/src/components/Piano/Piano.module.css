@@ -1,0 +1,35 @@
+.currentNote {
+    font-size: 40px;
+    margin-top: 30px;
+}
+
+.gameButton {
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.gameButton span {
+    margin-left: 10px;
+}
+
+.play {
+    margin-top: 20px;
+}
+
+.play button {
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.play button:first-child {
+    margin-right: 20px;
+}
+
+.play button span {
+    margin-left: 10px;
+}

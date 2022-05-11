@@ -1,0 +1,322 @@
+.main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile {
+    width: 100%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    composes: textColor from "../../App.module.css";
+}
+
+.card {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px 0px #ccc;
+    border-radius: 10px;
+}
+
+.info {
+    display: flex;
+}
+
+.guess p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.guess p span {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    padding: 20px;
+    border: 2px solid greenyellow;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    text-align: center;
+    margin-right: 30px;
+}
+
+.avatar > span {
+    font-size: 50px;
+}
+
+.info li {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+.info li:last-child {
+    margin-bottom: 0;
+}
+
+.icon {
+    font-size: 20px;
+    margin-right: 10px;
+    composes: textColor from "../../App.module.css";
+}
+
+.key {
+    font-size: 20px;
+    margin-right: 10px;
+    composes: textColor from "../../App.module.css";
+}
+
+
+.buttons {
+    margin-bottom: 30px;
+}
+
+.button {
+    width: 100%;
+    composes: backgroundColor from "../../App.module.css";
+    composes: textColor from "../../App.module.css";
+    display: inline-flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.button:last-child {
+    margin-bottom: 0;
+}
+
+.text {
+    font-size: 14px;
+}
+
+.heading {
+    text-align: left;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.search {
+    margin-bottom: 20px;
+}
+
+.input {
+    outline: none;
+    -webkit-appearance: none;
+    -webkit-border: none;
+    border: none;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #eee;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 5px 0px #ccc;
+    width: 100%;
+    padding: 15px;
+    composes: textColor from "../../App.module.css";
+    font-size: 14px;
+}
+
+.input::placeholder {
+    color: #999;
+}
+
+.input:focus::placeholder {
+    color: #eee;
+}
+
+.left {
+    width: 75%;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 30px;
+}
+
+.users {
+    width: 75%;
+    margin-left: 30px;
+}
+
+.user {
+    width: 32%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    composes: backgroundColor from "../../App.module.css";
+    composes: textColor from "../../App.module.css";
+    border-radius: 10px;
+    margin-bottom: 2%;
+    margin-right: 2%;
+}
+
+.user:nth-child(3n) {
+    margin-right: 0;
+} 
+
+.userInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.userInfo > span {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.deleteButton {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0 0 0 10px;
+}
+
+.delete {
+    font-size: 20px;
+    composes: textColor from "../../App.module.css";
+}
+
+.block {
+    display: none;
+}
+
+.block.active {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 2px solid #304269;
+    margin-bottom: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.tab {
+    width: auto;
+    display: inline-block;
+    text-align: center;
+    composes: textColor from "../../App.module.css";
+    padding: 15px 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 14px;
+}
+
+.selected {
+    composes: backgroundColor from "../../App.module.css";
+    composes: textColor from "../../App.module.css";
+}
+
+.editButton {
+    composes: backgroundColor from "../../App.module.css";
+    composes: textColor from "../../App.module.css";
+    display: inline-flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.editButton:nth-child(2) {
+    margin-left: 10px;
+}
+
+.editButton:nth-child(3) {
+    margin-left: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.editIcon {
+    font-size: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+    .user {
+        width: 49%;
+    }
+    .user:nth-child(3n) {
+        margin-right: 2%;
+    }
+    
+    .user:nth-child(2n) {
+        margin-right: 0;
+    } 
+}
+
+@media screen and (max-width: 1000px) {
+    .user {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .user:nth-child(3n) {
+        margin-right: 0;
+    }
+    
+    .user:nth-child(2n) {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .profile {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .buttons {
+        margin-left: 30px;
+    }
+
+    .users {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .profile {
+        flex-direction: column;
+    }
+
+    .card {
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+
+    .buttons {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .profile {
+        min-width: 100%;
+    }
+
+    .card {
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .info {
+        margin-bottom: 20px;
+    }
+}

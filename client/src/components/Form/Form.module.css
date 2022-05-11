@@ -1,0 +1,77 @@
+.block {
+    width: 100%;
+}
+
+.item {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input {
+    outline: none;
+    -webkit-appearance: none;
+    -webkit-border: none;
+    border: none;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #eee;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 5px 0px#ccc;
+    width: 100%;
+    padding: 15px;
+    composes: textColor from "../../App.module.css";
+    font-size: 14px;
+}
+
+.input::placeholder {
+    color: #999;
+}
+
+.input:focus::placeholder {
+    color: #eee;
+}
+
+.relative {
+    position: relative;
+}
+
+.select {
+    outline: none;
+    -webkit-appearance: none;
+    -webkit-border: none;
+    border: none;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #eee;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 5px 0px#ccc;
+    width: 100%;
+    padding: 15px;
+    composes: textColor from "../../App.module.css";
+    font-size: 14px;
+}
+
+.icon {
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    composes: textColor from "../../App.module.css";
+    transform: rotate(90deg) translateX(-50%);
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+.submit {
+    border: none;
+    composes: backgroundColor from "../../App.module.css";
+    padding: 15px 30px;
+    composes: textColor from "../../App.module.css";
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 10px;
+    outline: none;
+}
