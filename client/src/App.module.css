@@ -4,7 +4,7 @@
 
 .auth {
     height: 100vh;
-    background: url(./images/auth.jpg) center 0 no-repeat;
+    background: url(./images/auth-min.jpg) center 0 no-repeat;
     background-size: cover;
     display: grid;
     place-items: center;
