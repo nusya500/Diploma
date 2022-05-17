@@ -1,0 +1,38 @@
+.lesson {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.item {
+    box-shadow: 0px 0px 10px 0px #ccc;
+    border-radius: 10px;
+}
+
+.item img {
+    height: 100px;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.item a {
+    display: inline-block;
+    padding: 20px;
+    font-size: 25px;
+    color: #000;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+    .lesson {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .lesson {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

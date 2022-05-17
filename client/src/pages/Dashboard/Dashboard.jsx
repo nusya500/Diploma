@@ -17,6 +17,8 @@ export const Dashboard = () => {
 
     const links = [
         { title: 'Пианино', link: 'piano', icon: 'piano' },
+        { title: 'Расписание', link: 'schedule', icon: 'calendar_month' },
+        { title: 'Расписание', link: 'lessons', icon: 'play_lesson' },
     ]
 
     const items = links.map(({title, link, icon}, i) => {

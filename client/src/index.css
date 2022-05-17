@@ -62,3 +62,9 @@ button {
     font-size: 40px;
     margin-right: 10px;
 }
+
+@media screen and (max-width: 1000px) {
+    .lesson iframe {
+        width: 100%;
+    }
+}

@@ -39,17 +39,17 @@ export const Profile = () => {
                             <ul>
                                 <li>{ profile.fullname }</li>
                                 <li>{ profile.email }</li>
-                                <li>Возраст: { profile.age }</li>
+                                {/* <li>Возраст: { profile.age }</li> */}
                             </ul>
                         </div>
                     </div>
                     
-                    <div className={Styles.guess}>
+                    {/* <div className={Styles.guess}>
                         <p>
                             <span>{ JSON.parse(localStorage.getItem('guessed')) }</span>
                             нот угадано
                         </p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

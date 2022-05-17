@@ -59,7 +59,7 @@ export const PianoC = () => {
             message(`Молодец! Ты угадал ноту ${notes[guess]}`, 'success')
             setGuess('')
             setShow(false)
-            localStorage.setItem('guessed', JSON.parse(localStorage.getItem('guessed')) + 1)
+            // localStorage.setItem('guessed', JSON.parse(localStorage.getItem('guessed')) + 1)
         }
         // } else {
         //     message(`Неправильно! Попробуй ещё раз`, 'error')
