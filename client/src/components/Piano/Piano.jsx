@@ -8,6 +8,8 @@ import Soundfont from 'soundfont-player'
 import { useMessage } from '../../hooks/message.hook'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
+import { useReactMediaRecorder } from "react-media-recorder";
+import Octaves from './../../images/octaves.png'
 
 export const PianoC = () => {
     toast.configure({
@@ -19,6 +21,8 @@ export const PianoC = () => {
     const [note, setNote] = useState()
     const [guess, setGuess] = useState('')
     const [show, setShow] = useState(false)
+
+    const { status, startRecording, stopRecording, mediaBlobUrl } = useReactMediaRecorder({ screen: true, audio: false })
 
     const message = useMessage()
 
@@ -48,8 +52,8 @@ export const PianoC = () => {
         //         piano.play(notesStart[i])
         //     })
         // }
-
         setShow(true)
+        startRecording()
     }
 
     const guessNote = (note) => {
@@ -59,6 +63,7 @@ export const PianoC = () => {
             message(`Молодец! Ты угадал ноту ${notes[guess]}`, 'success')
             setGuess('')
             setShow(false)
+            setTimeout(stopRecording, 1000)
             // localStorage.setItem('guessed', JSON.parse(localStorage.getItem('guessed')) + 1)
         }
         // } else {
@@ -70,6 +75,9 @@ export const PianoC = () => {
 
     return (
         <div className={Styles.piano}>
+            <img src={ Octaves } alt="" />
+            <p>Нота* - графическое обозначение звука музыкального произведения</p>
+            <p style={{marginBottom: '20px'}}>Октава* - музыкальный интервал, в котором соотношение частот между звуками составляет один к двум</p>
             <SoundfontProvider
                 setNote={setNote}
                 guessNote={guessNote}
@@ -83,7 +91,7 @@ export const PianoC = () => {
                         playNote={playNote}
                         stopNote={stopNote}
                         disabled={isLoading}
-                        keyboardShortcuts={keyboardShortcuts}
+                        // keyboardShortcuts={keyboardShortcuts}
                     />
                 )}
             />
@@ -116,6 +124,12 @@ export const PianoC = () => {
                     </span>
                 </button>
             </div>
+            {/* <p>{status}</p> */}
+            {
+                status === 'stopped' ?
+                <video style={{marginTop: '20px'}} width={'100%'} src={mediaBlobUrl} controls autoPlay loop /> :
+                null
+            }
         </div>
     )
 }

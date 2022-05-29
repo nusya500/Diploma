@@ -33,3 +33,14 @@
 .play button span {
     margin-left: 10px;
 }
+
+.piano > img {
+    width: 1400px;
+    margin-bottom: 20px;
+}
+
+/* @media screen and (max-width: 950px) {
+    .piano > img {
+        width: 100%;
+    }
+} */
