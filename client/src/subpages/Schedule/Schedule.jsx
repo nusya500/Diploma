@@ -26,7 +26,7 @@ const resources = [
         fieldName: 'teacherName',
         title: 'Учитель',
         instances: [
-            { text: 'Наталья Верещагина', id: 1, color: blue },
+            // { text: 'Наталья Верещагина', id: 1, color: blue },
             { text: 'Чолпон Разакова', id: 2, color: orange },
         ],
     },
